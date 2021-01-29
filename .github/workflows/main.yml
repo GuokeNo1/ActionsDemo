@@ -16,9 +16,5 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world!
       - name: Get Kline
-        run: https://api.huobi.pro/market/history/kline?period=1day&size=5&symbol=btcusdt
+        run: curl https://api.huobi.pro/market/history/kline?period=1day&size=5&symbol=btcusdt
